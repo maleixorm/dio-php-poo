@@ -1,0 +1,15 @@
+{
+    "name": "marco/dio-php-poo",
+    "autoload": {
+        "psr-4": {
+            "Marco\\DioPhpPoo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marcos Aleixo",
+            "email": "maknytz@gmail.com"
+        }
+    ],
+    "require": {}
+}
