@@ -1,5 +1,6 @@
 {
     "name": "marco/dio-php-poo",
+    "description": "Projeto utilizado no curso de orientação à objetos do PHP da DIO",
     "autoload": {
         "psr-4": {
             "Marco\\DioPhpPoo\\": "src/"
