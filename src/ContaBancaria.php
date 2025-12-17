@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Marco\DioPhpPoo;
 
-class ContaBancaria 
+abstract class ContaBancaria 
 {
     private string $banco;
     private string $nomeTitular;
@@ -30,5 +30,24 @@ class ContaBancaria
             'numeroConta' => $this->numeroConta,
             'saldo' => $this->saldo
         ];
+    }
+
+    public function depositar(float $valor):string
+    {
+        $this->saldo += $valor;
+        return "Depósito de R$ " . number_format($valor, 2, ",", "") . " realizado.";
+    }
+    
+    public function sacar(float $valor):string
+    {
+        $this->saldo -= $valor;
+        return "Saque de R$ " . number_format($valor, 2, ",", "") . " realizado.";
+    }
+
+    public abstract function obterSaldo():string;
+
+    public function __get($item)
+    {
+        return $this->$item;
     }
 }
